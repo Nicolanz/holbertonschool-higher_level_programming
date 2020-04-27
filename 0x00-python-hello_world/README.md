@@ -1,0 +1,1 @@
+This is the folder to resolve the first Python Challenge: **0x00-python-hello_world** at Holberton School Medellin.

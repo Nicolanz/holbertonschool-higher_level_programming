@@ -8,7 +8,7 @@ def convert(str):
 
 def remove_char_at(str, n):
     string = list(str)
-    if (len(str) > n):
+    if (len(str) > n and n >= 0):
         string[n] = ''
     string = convert(string)
     return string

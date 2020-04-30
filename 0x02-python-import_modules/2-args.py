@@ -5,8 +5,8 @@ if __name__ == "__main__":
     if (size < 1):
         print("0 arguments.")
     elif (size == 1):
-        print("{:d} argument:".format(size))
+        print("1 argument:".format(size))
     else:
         print("{:d} arguments:".format(size))
     for i in range(1, len(argv)):
-        print("{:d}: {:s} ".format(i, argv[i]))
+        print("{:d}: {:s}".format(i, argv[i]))

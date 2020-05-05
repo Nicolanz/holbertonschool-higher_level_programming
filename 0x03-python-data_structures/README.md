@@ -1,0 +1,1 @@
+This is the folder to resolve the Python Challenge: **0x03-python-data_structures** at Holberton School Medellin.

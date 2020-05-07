@@ -1,0 +1,1 @@
+This is the folder to resolve the Python Challenge: **0x04-python-more_data_structures** at Holberton School Medellin.

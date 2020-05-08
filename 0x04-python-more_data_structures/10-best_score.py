@@ -3,7 +3,7 @@ def best_score(a_dictionary):
     if not a_dictionary:
         return None
     name = ""
-    valor = list(a_dictionary.values())[0]
+    valor = 0
     for i, j in a_dictionary.items():
         if (j > valor):
             valor = j

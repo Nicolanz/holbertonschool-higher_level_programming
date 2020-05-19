@@ -1,5 +1,5 @@
 #!/usr/bin/python3
+"""Module Docstring"""
 class Square:
-    """This is a class 
-    """
-    pass
+    """Class docstring"""
+    pass #This just lets continue

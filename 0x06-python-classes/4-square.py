@@ -31,7 +31,7 @@ class Square:
         else:
             self.__size = value
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         """Instantiation of size
 
         Arguments:

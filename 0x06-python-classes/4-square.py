@@ -4,13 +4,6 @@
 
 class Square:
     """Class of the object"""
-    def __init__(self, size):
-        """Instantiation of size
-
-        Arguments:
-            size {[int]} -- [Attribute]
-        """
-        self.__size = size
 
     @property
     def size(self):
@@ -37,6 +30,14 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
+
+    def __init__(self, size):
+        """Instantiation of size
+
+        Arguments:
+            size {[int]} -- [Attribute]
+        """
+        self.__size = size
 
     def area(self):
         """

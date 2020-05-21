@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Module to create a class for an object and modify private attribute size.
 There are also two method to get the area fo size and print the square"""
 

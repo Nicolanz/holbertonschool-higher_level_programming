@@ -1,0 +1,95 @@
+0-add_integer.txt
+
+
+===============================
+ how to use 0-add_integer.py
+===============================
+
+This library is very simple, since it only has one function called
+``add_integer()``.
+
+Numbers
+=======
+
+``add_integer()`` returns the sum of two numbers
+that value is equivalent to using the ``+`` operator.
+
+::
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(1, 2)
+    3
+
+It also works with floating-point values combined with ints.
+
+::
+
+    >>> add_integer(2.0, 3)
+    5
+
+It works with mixed negative and positve value.
+
+::
+
+    >>> add_integer(-3, 6)
+    3
+
+it works with negative int values.
+
+::
+
+    >>> add_integer(-5, -5)
+    -10
+
+
+It works with floating ponts mixed:
+
+::
+
+    >>> add_integer(2.0, 2.6)
+    4
+
+Case for negative floats and positive floats
+
+::
+
+    >>> add_integer(-4.4, 3.2)
+    -1
+
+Case for negative values
+
+::
+
+    >>> add_integer(-2.3, -2,2)
+    -4
+
+
+if just one argument is passed it will be added with default value
+of b which is 98
+
+::
+
+    >>> add_integer(4, )
+    102
+
+This function requires at least one patameter. Otherwise it will
+return an error
+
+::
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Non-Numbers
+===========
+This function does not accept different values of ints 
+and floats
+
+::
+
+    >>> add_integer("hello", 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer

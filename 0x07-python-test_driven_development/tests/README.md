@@ -1,0 +1,1 @@
+This is the README.md of the **tests** folder. It contains the .txt file to tests the functions

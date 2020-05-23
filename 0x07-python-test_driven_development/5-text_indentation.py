@@ -1,11 +1,21 @@
 #!/usr/bin/python3
+"""Function to print a text.
+If it finds a specific letter
+it will print two newlines.
+This fucntion provides a .txt file
+to test"""
+
+
 def text_indentation(text):
-    i =0
-    c = i-1
+    """Text
+
+    Arguments:
+        text {[str]} -- [text]
+    """
+    if type(text) != str:
+        raise TypeError("text must be a string")
     for i in range(len(text)):
-        if text[c] == " ":
-            print(text[i],end="")
-        if (text[i] == "." or text[i] == "?" or text[i] ==":"):
+        print(text[i], end="")
+        if (text[i] == "." or text[i] == "?" or text[i] == ":"):
             print("\n")
-        c = c+1
     print()

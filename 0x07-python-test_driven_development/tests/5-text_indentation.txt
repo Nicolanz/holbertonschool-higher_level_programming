@@ -1,0 +1,46 @@
+5-text_indentation.txt
+
+===============================
+ how to use 5-text_indentation.py
+===============================
+
+This is the module to explain the use of ``text_indentation()``.
+
+Numbers
+=======
+
+``text_indentation()`` - Prints a text with some newlines
+
+Correct usage: Call the function and complete it with 
+one int parameter -> text
+
+Import the module.
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Use the fucntion with a str parameter
+
+::
+
+    >>> text_indentation("Hello World")
+    Hello World
+
+Error if number is passed
+
+::
+
+    >> text_indentation(5)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Error if more than 1 argument is passed
+
+::
+
+    >>> text_indentation(5, 6)
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() takes 1 positional argument but 2 were given

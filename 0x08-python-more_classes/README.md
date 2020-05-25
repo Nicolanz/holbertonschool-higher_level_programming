@@ -1,0 +1,1 @@
+This is the folder to resolve the **0x08. Python - More Classes and Objects** challenge at Holberton School

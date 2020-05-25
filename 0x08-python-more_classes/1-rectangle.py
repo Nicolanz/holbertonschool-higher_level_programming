@@ -6,11 +6,11 @@ height and width specified"""
 class Rectangle:
     """Class the built the rectangle"""
     def __init__(self, width=0, height=0):
-        """Function to Initialize the atributtes
+        """Initializes atributtes
 
         Keyword Arguments:
-            width {int} -- [width of the Ractangle] (default: {0})
-            height {int} -- [Height of the Rectangle] (default: {0})
+            width {int} -- [width value] (default: {0})
+            height {int} -- [height value] (default: {0})
         """
         self.width = width
         self.height = height
@@ -22,13 +22,11 @@ class Rectangle:
         Returns:
             [int] -- [Return width to the modify it]
         """
-
         return self.__width
 
     @width.setter
     def width(self, value):
         """Function to modify width
-
         Arguments:
             value {[int]} -- [New value]
 
@@ -50,7 +48,7 @@ class Rectangle:
         Returns:
             [int] -- [New value]
         """
-        return self.__width
+        return self.__height
 
     @height.setter
     def height(self, value):

@@ -1,0 +1,1 @@
+This is the folder to resolve the **0x09. Python - Everything is object** challenge at Holberton School

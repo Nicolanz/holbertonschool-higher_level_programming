@@ -4,12 +4,13 @@ list of available attributes and methods of an object"""
 
 
 def lookup(obj):
-    """Function
+    """function to return a
+    list of available attributes and methods of an object
 
     Arguments:
-        obj {[Any Type]} -- [Object]
+        obj {[type]} -- [object]
 
     Returns:
-        [list] -- [List of available attributes and methods of an object"]
+        [type] -- [list of available attributes and methods]
     """
     return dir(obj)

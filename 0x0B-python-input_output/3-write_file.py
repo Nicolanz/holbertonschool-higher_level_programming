@@ -14,7 +14,7 @@ def write_file(filename="", text=""):
         [int] -- [Number of characters written]
     """
     lines = 0
-    with open(filename, "w") as f:
+    with open(filename, "w", encoding="utf8") as f:
         for i in text:
             f.write(i)
             lines += 1

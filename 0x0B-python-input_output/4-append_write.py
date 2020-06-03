@@ -1,21 +1,21 @@
 #!/usr/bin/python3
-"""Writes a string to a text file"""
+"""Appends a string at the end of a text file"""
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """Writes a string to a text file
     and creates it if it does not exist.
-    It also overwrites the text to the file.
+    It appends new content
 
     Keyword Arguments:
         filename {str} -- [Name of the file] (default: {""})
         text {str} -- [Text] (default: {""})
 
     Returns:
-        [int] -- [Number of characters written]
+        [type] -- [Num of cars]
     """
     chars = 0
-    with open(filename, "w", encoding="utf8") as f:
+    with open(filename, "a", encoding="utf8") as f:
         for i in text:
             f.write(i)
             chars += 1

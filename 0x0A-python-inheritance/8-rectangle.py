@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module to create a new rectangle"""
+"""
+  Module to create a new rectangle
+"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 

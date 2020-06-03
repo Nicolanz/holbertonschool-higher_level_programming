@@ -16,7 +16,7 @@ class Rectangle(BaseGeometry):
             width {[int]} -- [positive ints]
             height {[int]} -- [positive ints]
         """
-        Rectangle.integer_validator(self, "width", width)
-        Rectangle.integer_validator(self, "height", height)
+        BaseGeometry.integer_validator(self, "width", width)
+        BaseGeometry.integer_validator(self, "height", height)
         self.__width = width
         self.__height = height

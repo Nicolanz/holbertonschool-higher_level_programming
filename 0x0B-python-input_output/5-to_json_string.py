@@ -4,12 +4,12 @@ import json
 
 
 def to_json_string(my_obj):
-    """Converts to json string
+    """Parses from json to string
 
     Arguments:
-        my_obj {[class]} -- [object]
+        my_obj {[object]} -- [object to parse]
 
     Returns:
-        [type] -- [class]
+        [type] -- [string]
     """
-    return json.dumps(my_obj, sort_keys=True)
+    return json.dumps(my_obj)

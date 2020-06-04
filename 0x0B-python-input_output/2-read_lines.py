@@ -24,11 +24,10 @@ def read_lines(filename="", nb_lines=0):
                 lines += 1
         return lines
 
-    with open(filename, encoding="utf8") as fobj:
+    with open(filename, mode='r', encoding="UTF8") as fobj:
         str = ""
         if nb_lines <= 0 or nb_lines >= numberOfLines(filename):
             str = fobj.read()
-            str += "\n"
         else:
             for i in range(nb_lines):
                 str += fobj.readline()

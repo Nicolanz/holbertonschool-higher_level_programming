@@ -12,4 +12,5 @@ def to_json_string(my_obj):
     Returns:
         [type] -- [class]
     """
-    return json.dumps(my_obj)
+    myJson = json.dumps(my_obj)
+    return myJson

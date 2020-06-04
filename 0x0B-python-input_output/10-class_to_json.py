@@ -2,18 +2,15 @@
 """Module that  returns the dictionary description with simple
 data structure(list, dictionary, string, integer and boolean)
 for JSON serialization of an object"""
-import json
 
 
 def class_to_json(obj):
-    """My Function
+    """Funtion of the mosule
 
     Arguments:
         obj {[type]} -- [Object]
 
     Returns:
-        [type] -- [object Parsed]
+        [type] -- [data repr of the obj]
     """
-    objeto = json.dumps(obj.__dict__)
-    c = json.loads(objeto)
-    return c
+    return obj.__dict__

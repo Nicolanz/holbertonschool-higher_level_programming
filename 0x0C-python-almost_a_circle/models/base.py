@@ -1,7 +1,17 @@
 #!/usr/bin/python3
+"""Base Module"""
+
+
 class Base:
+    """Base class"""
     __nb_objects = 0
+
     def __init__(self, id=None):
+        """Contructor
+
+        Args:
+            id ([type], optional): [Id]. Defaults to None.
+        """
         if id is not None:
             self.id = id
         else:

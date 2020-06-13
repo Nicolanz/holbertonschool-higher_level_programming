@@ -165,3 +165,20 @@ class Rectangle(Base):
         """
         return ("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
                 self.__x, self.__y, self.__width, self.__height))
+
+    def update(self, *args):
+        """Function to update values of intances
+        """
+        for i in range(len(args)):
+            if i is 0:
+                self.id = args[i]
+            elif i is 1:
+                self.__width = args[i]
+            elif i is 2:
+                self.__height = args[i]
+            elif i is 3:
+                self.__x = args[i]
+            elif i is 4:
+                self.__y = args[i]
+            else:
+                break

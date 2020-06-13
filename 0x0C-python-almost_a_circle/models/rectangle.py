@@ -68,33 +68,69 @@ class Rectangle(Base):
         """width setter
 
         Args:
-            value ([int]): [New value]
+            value ([int]): [value]
+
+        Raises:
+            TypeError: [Catchs type errors]
+            ValueError: [Catchs value errors]
         """
-        self.__width = value
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = value
 
     @height.setter
     def height(self, value):
         """height setter
 
         Args:
-            value ([int]): [New value]
+            value ([int]): [value]
+
+        Raises:
+            TypeError: [Catchs type errors]
+            ValueError: [Catchs value errors]
         """
-        self.__height = value
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__height = value
 
     @x.setter
     def x(self, value):
         """x setter
 
         Args:
-            value ([int]): [New value]
+            value ([int]): [value]
+
+        Raises:
+            TypeError: [Catchs type errors]
+            ValueError: [Catchs value errors]
         """
-        self.__x = value
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        elif value < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = value
 
     @y.setter
     def y(self, value):
         """y setter
 
         Args:
-            value ([int]): [New value]
+            value ([int]): [value]
+
+        Raises:
+            TypeError: [Catchs type errors]
+            ValueError: [Catchs value errors]
         """
-        self.__y = value
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        elif value < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = value

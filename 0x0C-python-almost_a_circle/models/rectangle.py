@@ -151,3 +151,12 @@ class Rectangle(Base):
                 print('#', end="")
             if i is not self.__height:
                 print()
+
+    def __str__(self):
+        """Returns the str way of the instance
+
+        Returns:
+            [str]: [String]
+        """
+        return ("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id,
+                self.__x, self.__y, self.__width, self.__height))

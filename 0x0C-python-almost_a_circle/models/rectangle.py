@@ -146,8 +146,13 @@ class Rectangle(Base):
     def display(self):
         """Prints in stdout the Rectangle instance
         """
+        for y in range(self.__y):
+            print()
         for i in range(self.__height):
             for j in range(self.__width):
+                if j == 0:
+                    for x in range(self.__x):
+                        print(" ", end="")
                 print('#', end="")
             if i is not self.__height:
                 print()

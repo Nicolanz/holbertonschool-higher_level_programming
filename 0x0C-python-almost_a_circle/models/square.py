@@ -48,8 +48,6 @@ class Square(Rectangle):
         elif value <= 0:
             raise ValueError("width must be > 0")
         else:
-            self.width = value
-            self.height = value
             self.__size = value
 
     def __str__(self):
@@ -58,5 +56,5 @@ class Square(Rectangle):
         Returns:
             [str]: [string to print]
         """
-        return ("[Square] ({:d}) {:d}/{:d} - {}".format(
-            self.id, self.x, self.y, self.size))
+        return ("[Square] ({:d}) {:d}/{:d} - {:d}".format(
+            self.id, self.x, self.y, self.__size))

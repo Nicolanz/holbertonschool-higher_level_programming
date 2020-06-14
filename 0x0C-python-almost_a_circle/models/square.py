@@ -20,7 +20,8 @@ class Square(Rectangle):
             y (int, optional): [y]. Defaults to 0.
             id ([type], optional): [id]. Defaults to None.
         """
-        super().__init__(size, size, x, y, id)
+        self.size = size
+        super().__init__(self.size, self.size, x, y, id)
 
     def __str__(self):
         """Returns string to print
@@ -29,4 +30,4 @@ class Square(Rectangle):
             [str]: [string to print]
         """
         return ("[Square] ({:d}) {:d}/{:d} - {}".format(
-            self.id, self.x, self.y, self.height))
+            self.id, self.x, self.y, self.size))

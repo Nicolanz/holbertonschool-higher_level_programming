@@ -199,7 +199,7 @@ class Rectangle(Base):
                     break
 
     def to_dictionary(self):
-        """Return the dict repr of an instance
+        """Return the dict repr of an rectangle
 
         Returns:
             [dict]: [dictionary]

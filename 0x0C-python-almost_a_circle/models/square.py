@@ -86,3 +86,17 @@ class Square(Rectangle):
                     self.y = args[i]
                 else:
                     break
+
+    def to_dictionary(self):
+        """Returns the dict repr if a square
+
+        Returns:
+            [dict]: [dictionary]
+        """
+        dict = {
+            "id": self.id,
+            "size": self.__size,
+            "x": self.x,
+            "y": self.y
+        }
+        return dict

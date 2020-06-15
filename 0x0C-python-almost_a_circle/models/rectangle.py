@@ -197,3 +197,18 @@ class Rectangle(Base):
                     self.__y = args[i]
                 else:
                     break
+
+    def to_dictionary(self):
+        """Return the dict repr of an instance
+
+        Returns:
+            [dict]: [dictionary]
+        """
+        dict = {
+            "id": self.id,
+            "width": self.__width,
+            "height": self.__height,
+            "x": self.__x,
+            "y": self.__y
+        }
+        return dict

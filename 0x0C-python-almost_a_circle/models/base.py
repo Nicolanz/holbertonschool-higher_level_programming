@@ -45,7 +45,7 @@ class Base:
             cls.to_json_string(myList)
         else:
             for i in list_objs:
-                myList.append(i.__dict__)
+                myList.append(i.to_dictionary())
             cls.to_json_string(myList)
-        with open("{}.json".format(cls.__name__), "w") as f:
+        with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
             json.dump(myList, f)

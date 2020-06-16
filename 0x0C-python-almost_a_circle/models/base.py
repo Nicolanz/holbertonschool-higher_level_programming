@@ -49,3 +49,18 @@ class Base:
             cls.to_json_string(myList)
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
             json.dump(myList, f)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Loads from json string to python
+
+        Args:
+            json_string ([str]): [json string]
+
+        Returns:
+            [type]: [python data type]
+        """
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)

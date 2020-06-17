@@ -73,8 +73,27 @@ class Base:
             [class]: [New instance]
         """
         try:
-            dummy = cls(1)
+            dummy = cls(**dictionary)
         except:
-            dummy = cls(1, 1)
+            dummy = cls(**dictionary)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Load from file
+
+        Returns:
+            [list]: [lista]
+        """
+        lista = []
+        try:
+            with open("{}.json".format(cls.__name__), "r") as f:
+                myList = json.load(f)
+        except:
+            return lista
+
+        for i in myList:
+            obj = cls.create(**i)
+            lista.append(obj)
+        return lista

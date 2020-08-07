@@ -52,7 +52,7 @@ What you should learn from this project:
 
 
 ### [6. First state model](./model_state.py)
-* 
+* Write a script to get the first state model of a database
 
 
 ### [7. All states via SQLAlchemy](./7-model_state_fetch_all.py)

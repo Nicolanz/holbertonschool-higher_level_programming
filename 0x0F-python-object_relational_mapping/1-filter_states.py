@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Module to list states which have a N as initia
-vpepalue"""
+"""Module to list states which have a N as initial
+value"""
 from sys import argv, exit
 import MySQLdb
 
@@ -10,6 +10,7 @@ else:
     try:
         db = MySQLdb.connect(
             host="localhost",
+            port=3306,
             user=argv[1],
             passwd=argv[2],
             db=argv[3]
@@ -20,6 +21,6 @@ else:
     cursor.execute('SELECT * FROM states')
     result = cursor.fetchall()
     for i in result:
-        if i[1][0] == "N":
+        if i[1][0] is "N":
             print(i)
     db.close()

@@ -1,11 +1,22 @@
 #!/usr/bin/python3
 """Module of model state"""
-from model_state import Base, State
-from sqlalchemy import (create_engine)
+import sqlalchemy
+from sqlalchemy.ext.declarative import declarative_base
 
-if __name__ == "__main__":
+Base = declarative_base()
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}\
-        '.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
 
-    Base.metadata.create_all(engine)
+class State(Base):
+    __tablename__ = 'states'
+    id = sqlalchemy.Column(
+        'id',
+        sqlalchemy.Integer,
+        nullable=False,
+        primary_key=True,
+        autoincrement=True
+    )
+    name = sqlalchemy.Column(
+        'name',
+        sqlalchemy.String(128),
+        nullable=False
+    )

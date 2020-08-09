@@ -14,11 +14,11 @@ if __name__ == "__main__":
     )
     Session = sessionmaker(engine)
     session = Session()
-    try:
-        consulta = session.query(State).first()
+    consulta = session.query(State).first()
+    if (consulta):
         print("{}: {}".format(
             consulta.__dict__['id'],
-            consulta.__dict__['name'])
-        )
-    except:
+            consulta.__dict__['name']
+        ))
+    else:
         print()

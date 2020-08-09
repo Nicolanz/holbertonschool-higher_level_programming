@@ -13,11 +13,8 @@ if __name__ == "__main__":
             sys.argv[3]),
         pool_pre_ping=True
     )
-    Base.metadata.create_all(engine)
 
-mydata = sqlalchemy.MetaData()
-
-Session = sessionmaker(bind=engine)
+Session = sessionmaker(ngine)
 session = Session()
 consulta = session.query(State).all()
 

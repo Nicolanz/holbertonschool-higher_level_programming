@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module to print the values of State"""
 
+
 import sqlalchemy
 import sys
 from sqlalchemy.orm import sessionmaker
@@ -19,4 +20,4 @@ if __name__ == "__main__":
     consulta = session.query(State).all()
 
     for i in consulta:
-        print ("{}: {}".format(i.__dict__['id'], i.__dict__['name']))
+        print ("{:d}: {:s}".format(i.__dict__['id'], i.__dict__['name']))

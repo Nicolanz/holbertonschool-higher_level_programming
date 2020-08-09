@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Module to list the first State object"""
 import sys
-from sqlalchemy import create_engine
+from sqlalchemy import (create_engine)
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     consulta = session.query(State).get(1)
 
     if len(session.query(State).all()) > 0:
-        print("{:d}: {:s}".format(
+        print("{}: {}".format(
             consulta.__dict__['id'], consulta.__dict__['name']
             )
         )

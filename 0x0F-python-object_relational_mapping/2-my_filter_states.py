@@ -18,7 +18,8 @@ else:
     except:
         exit(1)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = '{:s}'".format(argv[4]))
+    cursor.execute("SELECT * FROM states  WHERE name = %(searched)s\
+        ORDER BY id ASC", {'searched': argv[4]})
     result = cursor.fetchall()
     for i in result:
         print(i)

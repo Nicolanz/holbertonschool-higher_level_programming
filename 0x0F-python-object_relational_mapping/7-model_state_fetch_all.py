@@ -14,13 +14,13 @@ if __name__ == "__main__":
         pool_pre_ping=True
     )
 
-Session = sessionmaker(ngine)
-session = Session()
-consulta = session.query(State).all()
+    Session = sessionmaker(ngine)
+    session = Session()
+    consulta = session.query(State).all()
 
-if len(consulta) > 0:
-    for i in range(len(consulta)):
-        print ("{:d}: ".format(consulta[i].__dict__['id']), end='')
-        print ("{:s}".format(consulta[i].__dict__['name']))
-else:
-    print()
+    if len(consulta) > 0:
+        for i in range(len(consulta)):
+            print ("{:d}: ".format(consulta[i].__dict__['id']), end='')
+            print ("{:s}".format(consulta[i].__dict__['name']))
+    else:
+        print()

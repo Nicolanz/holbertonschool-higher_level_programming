@@ -12,13 +12,14 @@ if __name__ == "__main__":
             sys.argv[2],
             sys.argv[3]), pool_pre_ping=True
     )
+    Base.metadata.create_all(engine)
     Session = sessionmaker(engine)
     session = Session()
-    consulta = session.query(State).first()
-    if (consulta):
+    try:
+        consulta = session.query(State).first()
         print("{}: {}".format(
             consulta.__dict__['id'],
-            consulta.__dict__['name']
-        ))
-    else:
+            consulta.__dict__['name'])
+        )
+    except:
         print()

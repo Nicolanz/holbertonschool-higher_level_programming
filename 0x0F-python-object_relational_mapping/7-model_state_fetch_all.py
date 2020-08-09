@@ -14,7 +14,7 @@ if __name__ == "__main__":
         pool_pre_ping=True
     )
 
-    Session = sessionmaker(ngine)
+    Session = sessionmaker(engine)
     session = Session()
     consulta = session.query(State).all()
 

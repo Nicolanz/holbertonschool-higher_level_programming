@@ -4,8 +4,8 @@
 
 import sqlalchemy
 import sys
-from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     engine = sqlalchemy.create_engine(

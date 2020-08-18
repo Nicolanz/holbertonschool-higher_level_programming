@@ -1,0 +1,1 @@
+This is the folder to resolve the **0x10-python-network_0** of **holbertonschool-higher_level_programming** at Holberton School

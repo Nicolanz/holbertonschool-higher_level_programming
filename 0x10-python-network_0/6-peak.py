@@ -9,14 +9,8 @@ def find_peak(list_of_integers):
     Args:
         list_of_integers ([list]): [List to evaluate]
     """
-
+    lista = sorted(list_of_integers)
     try:
-        max = list_of_integers[0]
+        return(lista[-1])
     except:
-        max = None
-
-    for i in list_of_integers:
-        if i > max:
-            max = i
-
-    return(max)
+        return(None)

@@ -11,9 +11,7 @@ mail = {'email': argv[2]}
 data = urllib.parse.urlencode(mail)
 email = data.encode('utf-8')
 
-req = urllib.request.Request(site, email)
-
-with urllib.request.urlopen(req) as obj:
+with urllib.request.urlopen(site, email) as obj:
     body = obj.read()
 
 print(body.decode('utf-8'))

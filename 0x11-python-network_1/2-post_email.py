@@ -15,4 +15,5 @@ req = urllib.request.Request(site, email)
 
 with urllib.request.urlopen(req) as obj:
     body = obj.read()
-    print(body.decode('utf-8'))
+
+print(body.decode('utf-8'))

@@ -2,9 +2,9 @@
 """Print body of a request"""
 from urllib import request
 
-
-with request.urlopen('https://intranet.hbtn.io/status') as obj:
-    req = obj.read()
+if __name__ == "__main__":
+    with request.urlopen('https://intranet.hbtn.io/status') as obj:
+        req = obj.read()
 
     print("Body response:\n\
     \t- type: {}\n\

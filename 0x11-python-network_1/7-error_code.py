@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""7 error with requests"""
 import requests
 from sys import argv
 

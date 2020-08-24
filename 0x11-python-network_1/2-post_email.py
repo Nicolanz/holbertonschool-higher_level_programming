@@ -4,14 +4,15 @@ from sys import argv
 import urllib.parse
 import urllib.request
 
-site = argv[1]
-mail = {'email': argv[2]}
+if __name__ == "__main__":
+    site = argv[1]
+    email = {'email': argv[2]}
 
+    data = urllib.parse.urlencode(email)
+    email = data.encode('ascii')
 
-data = urllib.parse.urlencode(mail)
-data = data.encode('ascii')
+    res = urllib.request.Request(site, email)
 
-with urllib.request.urlopen(site, data) as obj:
-    body = obj.read()
-
-print(body.decode('utf-8'))
+    with urllib.request.urlopen(res) as obj:
+        body = obj.read()
+        print(body.decode('utf-8'))

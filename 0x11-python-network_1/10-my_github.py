@@ -13,6 +13,8 @@ if __name__ == "__main__":
 
     try:
         var = obj.json()
-        print(var['id'])
+        ans = var['id']
     except:
-        pass
+        ans = None
+
+    print(ans)

@@ -13,12 +13,11 @@ if (process.argv[2]) {
           tasks++;
         }
         if (!users[i + 1]) {
-          if (tasks === 0) {} else { dict[users[i].userId] = tasks; }
+          if (tasks === 0) {} else { dict[users[i].userId] = tasks; tasks = 0; }
           break;
         }
         if (users[i + 1].userId > users[i].userId) {
-          if (tasks === 0) {} else { dict[users[i].userId] = tasks; }
-          tasks = 0;
+          if (tasks === 0) {} else { dict[users[i].userId] = tasks; tasks = 0; }
         }
       }
       console.log(dict);
